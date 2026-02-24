@@ -1,8 +1,29 @@
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
+        int n = nums.size();
+        int c1=0,c2=0,c3=0;
+
+        for(int i=0;i<n;i++){
+            if(nums[i]==0) c1 += 1;
+            else if(nums[i]==1) c2 +=1;
+            else c3+=1 ; 
+        }
+        int idx=0;
+        for(int i=0;i<c1;i++){
+            nums[idx++]=0;
+
+        }
+        for(int i=0;i<c2;i++){
+            nums[idx++]=1;
+
+        }
+        for(int i=0;i<c3;i++){
+            nums[idx++]=2;
+
+        }
+    
         
-        sort(nums.begin(),nums.end());
         
         
     }
