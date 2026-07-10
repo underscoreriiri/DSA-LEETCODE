@@ -6,10 +6,12 @@ public:
             maxsum += nums[i];
         }
         int maxsum2=maxsum;
+        int j=0;
         for(int i=k;i<nums.size();i++){
-         maxsum = maxsum-nums[i-k];
+         maxsum = maxsum-nums[j];
          maxsum = maxsum + nums[i];
          maxsum2 = max(maxsum,maxsum2);
+         j++;
         }
         double MaxAverage = (double)maxsum2 / k;
         return MaxAverage;
